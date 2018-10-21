@@ -1,0 +1,34 @@
+{
+  "user1": {
+    "balance": 3700.00,
+    "savingsGoal": 300,
+    "monthlyIncome": 2000,
+    "rateGoal": 15,
+    "savings": {
+      "currentMonthly": 290,
+      "buffer": 90
+    },
+    "transactions": {
+      "food": 56,
+      "healthcare": 30,
+      "transport": 8,
+      "misc": 4
+    }
+  },
+  "user2": {
+    "balance": 2800,
+    "monthlyIncome": 2000,
+    "savingsGoal": 200,
+    "rateGoal": 10,
+    "savings": {
+      "currentMonthly": 150,
+      "buffer": -50
+    },
+    "transactions": {
+      "food": 60,
+      "healthcare": 20,
+      "transport": 15,
+      "misc": 5
+    }
+  }
+}

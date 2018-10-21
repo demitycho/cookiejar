@@ -6,11 +6,11 @@ const TableRow = props => {
 		return (
 			<Grid.Row>
         <Grid.Column width={5}>
-          <Header as='h5'>{props.date}</Header>
-          <p>{props.transactionName}</p>
+          <Header as='h5' style={{fontFamily: 'Montserrat'}}>{props.date}</Header>
+          <p style={{fontFamily: 'Montserrat'}}>{props.transactionName}</p>
         </Grid.Column>
         <Grid.Column floated='right' width={5}>
-          <Header as='h5' style={{color:"red"}}>-${props.amount}</Header>
+          <Header as='h5' style={{color:"red", fontFamily: 'Montserrat'}}>-${props.amount}</Header>
         </Grid.Column>
       </Grid.Row>
 		)
@@ -18,11 +18,11 @@ const TableRow = props => {
 		return (
 			<Grid.Row>
         <Grid.Column width={5}>
-          <Header as='h5'>{props.date}</Header>
-          <p>{props.transactionName}</p>
+          <Header as='h5' style={{fontFamily: 'Montserrat'}}>{props.date}</Header>
+          <p style={{fontFamily: 'Montserrat'}}>{props.transactionName}</p>
         </Grid.Column>
         <Grid.Column floated='right' width={5}>
-          <Header as='h5' style={{color:"green"}}>${Math.abs(props.amount)}</Header>
+          <Header as='h5' style={{color:"green", fontFamily: 'Montserrat'}}>${Math.abs(props.amount)}</Header>
         </Grid.Column>
       </Grid.Row>
 		)

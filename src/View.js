@@ -18,6 +18,11 @@ class View extends Component {
       data: userData['user'+user]
     }
   }
+  minus = () => {
+    const {data} = this.state
+    data.balance = data.balance - 1
+    this.setState({data})
+  }
   getStuff = () => {
     let a = fetch('https://97d19419.ngrok.io/get_payout')
     .then(res=>console.log("Success",res))
@@ -34,7 +39,7 @@ class View extends Component {
         </div>
         <div className="content">
           <div className="middleCard">
-            <CookieJar data={data.savings}/>
+            <CookieJar data={data.savings} minus={this.minus}/>
           </div>
           <div className="middleCard">
             <Transactions data={data.transactions}/>

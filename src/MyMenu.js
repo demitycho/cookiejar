@@ -13,7 +13,7 @@ class MyMenu extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu icon inverted style={{background: this.props.color}}>
+      <Menu icon inverted style={{background: this.props.color, marginBottom:'-15px'}}>
         <Menu.Item  name='home'  onClick={this.handleItemClick}>
           <Icon name="home" large/>
         </Menu.Item>

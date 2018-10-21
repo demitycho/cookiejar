@@ -8,7 +8,7 @@ class Transactions extends Component {
     const { data } = this.props
     return (
       <div>
-        <Header as='h2' style={{margin:'2% 10%'}}>
+        <Header as='h3' style={{margin:'2% 10%'}}>
           Transactions
         </Header>
         <Divider />

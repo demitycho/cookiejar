@@ -11,25 +11,25 @@ class CookieJar extends Component {
     const { data } = this.props
     return (
       <div>
-        <Header as='h2' style={{margin:'2% 10%'}}>
+        <Header as='h3' style={{margin:'2% 10%'}}>
           Savings
         </Header>
         <Grid columns={2} relaxed divided>
           <Grid.Column>
             <Segment basic>
-              <Graphic minus={this.minus} percent={"70%"}/>
+              <Graphic minus={this.minus} percent={data.rateGoal} n={this.props.n}/>
             </Segment>
           </Grid.Column>
           <Grid.Column>
             <Segment basic>
-              <Header as='h3' dividing>
+              <Header as='h4' dividing>
                 Savings Goal:
               </Header>
               <p>
                 ${data.savingsGoal} ({data.rateGoal}% of monthly goal)
               </p>
 
-              <Header as='h3' dividing>
+              <Header as='h4' dividing>
                 Amount spendable:
               </Header>
               <p>

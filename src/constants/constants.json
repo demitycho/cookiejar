@@ -6,7 +6,7 @@
       "currentMonthly": 290,
       "buffer": 90,
       "savingsGoal": 300,
-      "rateGoal": 15
+      "rateGoal": 10
     },
     "transactions": {
       "food": 56,
@@ -38,9 +38,9 @@
     "monthlyIncome": 2000,
     "savings": {
       "currentMonthly": 150,
-      "buffer": -50,
+      "buffer": 70,
       "savingsGoal": 200,
-      "rateGoal": 10
+      "rateGoal": 20
     },
     "transactions": {
       "food": 60,

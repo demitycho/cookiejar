@@ -33,22 +33,25 @@ class View extends Component {
           "amount": 30.00
         }
       ],
-      arrow: user === 1 ? "▲" : "▼",
+      arrow: user === 1 ? "▲ + $30.00" : "▼ - $30.00",
       color: user === 1 ? "green" : "red",
+      n: 0
     }
   }
   minus = () => {
-    const {data, queue} = this.state
+    const {data, queue, n} = this.state
     if (queue.length > 0) {
       let abc = queue.pop()
       data.balance = data.balance - abc.amount
       data.transactions.tableData.push(abc)
-      this.setState({data, queue})
+      data.savings.buffer = data.savings.buffer - abc.amount
+      let t = n + 1
+      this.setState({data, queue, n: t})
     } else {
       if (this.state.user === 1) {
-        data.balance = data.balance + 1
+        data.balance = data.balance + 30
       } else {
-        data.balance = data.balance - 1
+        data.balance = data.balance - 30
       }
       this.setState({data, done:true})
     }
@@ -69,13 +72,12 @@ class View extends Component {
         </div>
         <div className="content">
           <div className="middleCard">
-            <CookieJar data={data.savings} minus={this.minus}/>
+            <CookieJar data={data.savings} minus={this.minus} n={this.state.n}/>
           </div>
           <div className="middleCard">
             <Transactions data={data.transactions}/>
           </div>
         </div>
-        <Button onClick={this.getStuff} content='Primary' primary/>
       </div>
     );
   }

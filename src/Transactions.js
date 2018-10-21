@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import { Grid, Image, Header, Table,  Container, Divider , Menu } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
-import { AreaChart, Area, XAxis, YAxis, Tooltip } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import TransactionTable from './table.js';
 
 class Transactions extends Component {
   render() {
     const { data } = this.props
     const chartData = [
-      {name: '09/01/18', amt: 6000},
-      {name: '09/06/18', amt: 5460},
-      {name: '09/11/18', amt: 5104},
-      {name: '09/14/18', amt: 4830},
-      {name: '09/19/18', amt: 4273},
-      {name: '09/24/18', amt: 3432},
-      {name: '09/30/18', amt: 3200},
+      {name: '09/01/18', projected: 6000, actual: 6000},
+      {name: '09/06/18', projected: 5300, actual: 5460},
+      {name: '09/11/18', projected: 4900, actual: 5150},
+      {name: '09/14/18', projected: 4500, actual: 4900},
+      {name: '09/16/18', projected: 4350, actual: 4600},
+      {name: '09/19/18', projected: 4273},
+      {name: '09/24/18', projected: 3432},
+      {name: '09/30/18', projected: 3200},
     ]
     const menuData = [
       { key: 'editorials', name: '1 Day' },
@@ -103,7 +104,9 @@ class Transactions extends Component {
             <XAxis dataKey="name"/>
             <YAxis/>
             <Tooltip/>
-            <Area type='monotone' dataKey='amt' stroke='#8884d8' fill='#8884d8' />
+            <Legend/>
+            <Area type='monotone' dataKey='actual' stroke='#82ca9d' fill='#82ca9d' />
+            <Area type='monotone' dataKey='projected' stroke='#8884d8' fill='#8884d8' />
           </AreaChart>
         </div>
       </div>

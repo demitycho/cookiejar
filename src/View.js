@@ -29,8 +29,8 @@ class View extends Component {
       <div className="app1">
         <div className="fullHeader">
           <MyMenu color="#5BC5A7" />
-          <div className="balanceName">Balance: ${data.balance}</div>
-          <div className="goalName">Savings Goal: ${data.savingsGoal} ({data.rateGoal}% of monthly goal)</div>
+          <div className="balanceName">${data.balance}</div>
+          <div className="goalName">Available Balance</div>
         </div>
         <div className="content">
           <div className="middleCard">

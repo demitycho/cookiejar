@@ -23,7 +23,7 @@ class CookieJar extends Component {
                 Current Monthly Savings:
               </Header>
               <p>
-                ${data.currentMonthly}
+                ${data.savingsGoal} ({data.rateGoal}% of monthly goal)
               </p>
 
               <Header as='h3' dividing>

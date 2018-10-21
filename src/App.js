@@ -19,7 +19,7 @@ const accountOptions = [
 
 class App extends Component {
   state = {
-    loggedIn: true,
+    loggedIn: false,
     account: null
   }
 

@@ -20,7 +20,7 @@ class Graphic extends Component {
 
     return (
       <div onClick={this.minus}>
-        <Image onLoad={this.onImgLoad} style={{width:'95%', marginLeft:'2.5%'}} src='https://i.imgur.com/cAtvnUH.png' />
+        <Image onLoad={this.onImgLoad} style={{width:'30%', marginLeft:'2.5%'}} src='https://i.imgur.com/cAtvnUH.png' />
         <div style={{
           position: 'absolute',
           top: this.props.percent,
@@ -32,18 +32,17 @@ class Graphic extends Component {
           textAlign:'right',
           color:'red'
         }}>Goal</div>
-        {this.state.loaded ?
-          <img style={{
-            position: 'absolute',
-            top: 0,
-            left: '-56px',
-            width: this.state.height,
-            clip: 'rect(0px 180px 6 0px 0px)',
-            transform: 'rotate(90deg)'
-          }}
+          {/*{this.state.loaded ?*/}
+            {/*<img style={{*/}
+              {/*position: 'absolute',*/}
+              {/*top: 0,*/}
+              {/*left: '-56px',*/}
+              {/*width: this.state.height,*/}
+              {/*clip: 'rect(0px 180px 6 0px 0px)',*/}
+            {/*}}*/}
 
-          src='https://i.imgur.com/I3wwIPp.jpg' />
-          : null }
+            {/*src='https://i.imgur.com/I3wwIPp.jpg' />*/}
+            {/*: null }*/}
       </div>
 
     );

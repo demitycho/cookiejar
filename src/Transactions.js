@@ -6,32 +6,15 @@ import TransactionTable from './table.js';
 class Transactions extends Component {
   render() {
     const { data } = this.props
-    const tableData = [
-      {
-        date: "09/02/18",
-        transactionName: "Safeway",
-        amount: 98.56
-      },
-      {
-        date: "09/12/18",
-        transactionName: "Subway",
-        amount: 7.94
-      },
-      {
-        date: "09/23/18",
-        transactionName: "Trader Joe's",
-        amount: -64.81
-      }
-    ]
     return (
       <div>
         <Header as='h2' style={{margin:'2% 10%'}}>
           Transactions
         </Header>
         <Divider />
-        <TransactionTable entries={tableData} />
+        <TransactionTable entries={data.tableData} />
         <Divider />
-        <Image style={{margin:'10%', width:'80%'}} src='https://www.mathsisfun.com/data/images/pie-chart-movies.svg' />
+        <Image style={{margin:'10%', width:'80%'}} src={data.url} />
         <div style={{margin:'10%', width:'80%'}} >
           <Grid columns={2} divided>
             <Grid.Row>

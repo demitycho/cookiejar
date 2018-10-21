@@ -1,6 +1,6 @@
 {
   "user1": {
-    "balance": 3700.00,
+    "balance": 6000,
     "monthlyIncome": 2000,
     "savings": {
       "currentMonthly": 290,
@@ -12,7 +12,25 @@
       "food": 56,
       "healthcare": 30,
       "transport": 8,
-      "misc": 4
+      "misc": 4,
+      "url": "https://i.imgur.com/00RPn8f.png",
+      "tableData": [
+        {
+          "date": "09/02/18",
+          "transactionName": "Safeway",
+          "amount": 98.56
+        },
+        {
+          "date": "09/12/18",
+          "transactionName": "Subway",
+          "amount": 7.94
+        },
+        {
+          "date": "09/23/18",
+          "transactionName": "Trader Joe's",
+          "amount": -64.81
+        }
+      ]
     }
   },
   "user2": {
@@ -28,7 +46,25 @@
       "food": 60,
       "healthcare": 20,
       "transport": 15,
-      "misc": 5
+      "misc": 5,
+      "url": "https://i.imgur.com/FhUnTyr.png",
+      "tableData": [
+        {
+          "date": "09/02/18",
+          "transactionName": "Safeway",
+          "amount": 98.56
+        },
+        {
+          "date": "09/12/18",
+          "transactionName": "Subway",
+          "amount": 7.94
+        },
+        {
+          "date": "09/23/18",
+          "transactionName": "Trader Joe's",
+          "amount": -64.81
+        }
+      ]
     }
   }
 }

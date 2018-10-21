@@ -18,7 +18,8 @@ code {
 }
 
 .fullHeader{
-  background: #5BC5A7;
+  background: #00b5ad;
+  color: white;
 }
 
 .balanceName{
@@ -40,10 +41,17 @@ code {
   margin-left: 20%;
   margin-right: 20%;
 }
-
+.pieChart {
+  width: 60%;
+  margin-left: 20%;
+}
 @media only screen and (max-width: 768px) {
   .content {
     width: 100%;
     margin: 0%;
+  }
+  .pieChart {
+    width: initial;
+    margin-left: initial;
   }
 }

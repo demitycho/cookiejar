@@ -17,13 +17,27 @@ class Graphic extends Component {
     });
   }
   render() {
-
+    const images = ['https://i.imgur.com/P6pnJLF.png',
+      'https://i.imgur.com/mMBgzru.png',
+      'https://i.imgur.com/sOpDrdZ.png',
+      'https://i.imgur.com/Vdx5z1U.png']
+    const { n } =  this.props
+    const widths = ['30%', '38%', '50%','53%']
     return (
       <div onClick={this.minus}>
-        <Image onLoad={this.onImgLoad} style={{width:'30%', marginLeft:'2.5%'}} src='https://i.imgur.com/cAtvnUH.png' />
+        <Image onLoad={this.onImgLoad} style={{width:'70%', marginLeft:'2.5%'}} src='https://i.imgur.com/cAtvnUH.png' />
+        <Image
+          src={images[n]}
+          style={{
+            position: 'absolute',
+            width:"53%",
+            top: widths[n],
+            left: '13%',
+          }}
+        />
         <div style={{
           position: 'absolute',
-          top: this.props.percent,
+          top: `${100-this.props.percent - 28}%`,
           left: '5%',
           borderStyle: 'dotted',
           borderWidth: '2px 0px 0px 0px',
@@ -43,6 +57,7 @@ class Graphic extends Component {
 
             {/*src='https://i.imgur.com/I3wwIPp.jpg' />*/}
             {/*: null }*/}
+
       </div>
 
     );

@@ -43,8 +43,13 @@ class App extends Component {
             `}</style>
             <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle'>
               <Grid.Column style={{ maxWidth: 450 }}>
+                <Header as='h1' color='teal' textAlign={'center'} > CookieJar </Header>
+                <Image src='https://i.imgur.com/COhBz3G.png'
+                  style={{width:"40%",marginLeft:"30%"}}
+                />
                 <Header as='h2' color='teal' textAlign='center'>
-                  <Image src='/logo.png' /> Log-in to your account
+                  {/*<Image src='https://i.imgur.com/0J0LMYE.png' /> <br/>*/}
+                  Log-in to your account
                 </Header>
                 <Form size='large'>
                   <Segment stacked>

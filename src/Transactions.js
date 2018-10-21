@@ -23,13 +23,13 @@ class Transactions extends Component {
     ]
     return (
       <div>
-        <Header as='h2' style={{margin:'2% 10%', fontFamily: 'Montserrat'}}>
+        <Header as='h3' style={{margin:'2% 10%'}}>
           Transactions
         </Header>
         <Divider />
         <TransactionTable entries={data.tableData} />
         <Divider />
-        <Image style={{margin:'10%', width:'80%'}} src={data.url} />
+        <Image style={{margin:'10%', width:'80%'}} src={data.url} className="pieChart" />
         <div style={{margin:'10%', width:'80%'}} >
           <Grid columns={2} divided>
             <Grid.Row>

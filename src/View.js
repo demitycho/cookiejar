@@ -4,7 +4,7 @@ import 'semantic-ui-css/semantic.min.css';
 import MyMenu from "./MyMenu"
 import CookieJar from "./CookieJar"
 import Transactions from "./Transactions"
-import { Button } from 'semantic-ui-react'
+import { Header } from 'semantic-ui-react'
 
 import userData from './constants/constants.json'
 
@@ -33,22 +33,25 @@ class View extends Component {
           "amount": 30.00
         }
       ],
-      arrow: user === 1 ? "▲" : "▼",
+      arrow: user === 1 ? "▲ + $30.00" : "▼ - $30.00",
       color: user === 1 ? "green" : "red",
+      n: 0
     }
   }
   minus = () => {
-    const {data, queue} = this.state
+    const {data, queue, n} = this.state
     if (queue.length > 0) {
       let abc = queue.pop()
       data.balance = data.balance - abc.amount
       data.transactions.tableData.push(abc)
-      this.setState({data, queue})
+      data.savings.buffer = data.savings.buffer - abc.amount
+      let t = n + 1
+      this.setState({data, queue, n: t})
     } else {
       if (this.state.user === 1) {
-        data.balance = data.balance + 1
+        data.balance = data.balance + 30
       } else {
-        data.balance = data.balance - 1
+        data.balance = data.balance - 30
       }
       this.setState({data, done:true})
     }
@@ -63,19 +66,19 @@ class View extends Component {
     return (
       <div className="app1">
         <div className="fullHeader">
-          <MyMenu color="#5BC5A7" />
+          <MyMenu color="#00b5ad" />
           <div className="balanceName">${data.balance} { this.state.done ? <span style={{color:this.state.color}}>{this.state.arrow}</span>: null}</div>
           <div className="goalName">Available Balance</div>
         </div>
+        <Header as={"h2"}>Hello {data.name}!</Header>
         <div className="content">
           <div className="middleCard">
-            <CookieJar data={data.savings} minus={this.minus}/>
+            <CookieJar data={data.savings} minus={this.minus} n={this.state.n}/>
           </div>
           <div className="middleCard">
             <Transactions data={data.transactions}/>
           </div>
         </div>
-        <Button onClick={this.getStuff} content='Primary' primary/>
       </div>
     );
   }
